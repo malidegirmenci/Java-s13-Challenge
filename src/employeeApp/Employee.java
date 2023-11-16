@@ -1,11 +1,11 @@
 package employeeApp;
 
 public class Employee {
-    String id;
-    String fullName;
-    String email;
-    String password;
-    String[] healthPlans;
+    private String id;
+    private String fullName;
+    private String email;
+    private String password;
+    private String[] healthPlans;
 
     public Employee(String id, String fullName, String email, String password, String[] healthPlans) {
         this.id = id;

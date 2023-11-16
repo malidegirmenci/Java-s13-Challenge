@@ -1,9 +1,9 @@
 package employeeApp;
 
 public class Healthplan {
-    String id;
-    String name;
-    Plan plan;
+    private String id;
+    private String name;
+    private Plan plan;
 
     public Healthplan(String id, String name, Plan plan) {
         this.id = id;

@@ -1,7 +1,7 @@
 package employeeApp;
 
 public enum Plan {
-    name, price;
+    NAME, PRICE;
 
     Plan(){
 

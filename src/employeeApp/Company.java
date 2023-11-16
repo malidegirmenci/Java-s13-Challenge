@@ -1,15 +1,18 @@
 package employeeApp;
 
 public class Company {
-    String id;
-    String name;
-    Double giro;
-    String[] developerNames;
+    private String id;
+    private String name;
+    private double giro;
+    private String[] developerNames;
 
-    public Company(String id, String name, Double giro, String[] developerNames) {
+    private double checkGiro(double value){
+        return value < 0 ? 0 : value;
+    }
+    public Company(String id, String name, double giro, String[] developerNames) {
         this.id = id;
         this.name = name;
-        this.giro = giro;
+        this.giro = checkGiro(giro);
         this.developerNames = developerNames;
     }
 
@@ -34,7 +37,7 @@ public class Company {
     }
 
     public void setGiro(Double giro) {
-        this.giro = giro;
+        this.giro = checkGiro(giro);
     }
 
     public String[] getDeveloperNames() {
