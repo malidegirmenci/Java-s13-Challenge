@@ -1,5 +1,7 @@
 package employeeApp;
 
+import java.util.Arrays;
+
 public class Company {
     private String id;
     private String name;
@@ -47,7 +49,27 @@ public class Company {
     public void setDeveloperNames(String[] developerNames) {
         this.developerNames = developerNames;
     }
-    public void addEmployee(int index, String name){
 
+    @Override
+    public String toString() {
+        return "Company{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", giro=" + giro +
+                ", developerNames=" + Arrays.toString(developerNames) +
+                '}';
+    }
+
+    public void addEmployee(int index, String name){
+        if(getDeveloperNames().length > index){
+            if(developerNames[index] == null){
+                developerNames[index] = name;
+            }else {
+                System.out.println(index+"th "+"of array is already full");
+            }
+
+        }else{
+            System.out.println("Index over limit of array");
+        }
     }
 }

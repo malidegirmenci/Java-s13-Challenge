@@ -31,6 +31,15 @@ public class Healthplan {
         return plan;
     }
 
+    @Override
+    public String toString() {
+        return "Health Plan{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", plan=" + plan +
+                '}';
+    }
+
     public void setPlan(Plan plan) {
         this.plan = plan;
     }

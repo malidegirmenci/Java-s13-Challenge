@@ -1,5 +1,7 @@
 package employeeApp;
 
+import java.util.Arrays;
+
 public class Employee {
     private String id;
     private String fullName;
@@ -55,7 +57,27 @@ public class Employee {
         this.healthPlans = healthPlans;
     }
 
-    public void addHealthPlan(int index, String name){
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id='" + id + '\'' +
+                ", fullName='" + fullName + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", healthPlans=" + Arrays.toString(healthPlans) +
+                '}';
+    }
 
+    public void addHealthPlan(int index, String name){
+        if(getHealthPlans().length > index){
+            if(healthPlans[index] == null){
+                healthPlans[index] = name;
+            }else {
+                System.out.println(index+"th "+"of array is already full");
+            }
+
+        }else{
+            System.out.println("Index over limit of array");
+        }
     }
 }

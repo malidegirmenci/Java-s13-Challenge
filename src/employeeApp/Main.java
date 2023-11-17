@@ -12,7 +12,19 @@ public class Main
      */
     private static void workWithData ()
     {
+        Healthplan basicHPlan = new Healthplan("0","Basic Health Plan",Plan.OUTPATIENT_TREATMENT);
+        System.out.println("Plan name: "+basicHPlan.getPlan().getName() + "\nPlan price: "+ basicHPlan.getPlan().getPrice());
+        System.out.println(basicHPlan.toString());
 
+
+        Employee emp = new Employee("0","Mahmut Ekrem","ma@gmail.com","21312",new String[]{basicHPlan.getPlan().getName(),
+                null,null,null});
+        emp.addHealthPlan(3,Plan.CHEMOTHERAPY.getName());
+        System.out.println(emp.toString());
+
+        Company cmp = new Company("0","MAD SOFT",123123,new String[]{"Ali"});
+        cmp.addEmployee(1,"Cabbar");
+        System.out.println(cmp.toString());
     }
 
     /**
